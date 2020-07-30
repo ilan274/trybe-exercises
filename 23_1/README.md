@@ -1,0 +1,1 @@
+MongoDB day one exercises

@@ -1,0 +1,3 @@
+// Exercise 2: Return the document with _id equal to 8, but only display the fields: _id and name
+
+db.bios.find({_id: 8}, {_id: 1, name: 1})
