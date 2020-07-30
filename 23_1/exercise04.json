@@ -1,0 +1,4 @@
+// Exercise 4: Return all documents in which the name.first field is equal to John, using the pretty() method.
+
+
+db.bios.find({'name.first': 'John'}).pretty()
