@@ -1,0 +1,3 @@
+// Exercise 5: Return the first 3 documents from the bios collection using the pretty() method.
+
+db.bios.find().limit(2).pretty()
