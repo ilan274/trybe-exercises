@@ -1,0 +1,6 @@
+// Exercise 9: Display the title, isbn and pageCount fields for the first 3 books. DO NOT return the _id field
+
+db.books.find({},
+  {
+    title: 1, isbn: 1, pageCount: 1, _id: 0
+  }).pretty().limit(3)

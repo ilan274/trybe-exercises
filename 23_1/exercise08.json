@@ -1,0 +1,3 @@
+// Exercise 8: Count how many books are in "PUBLISH" status
+
+db.books.find({ status: {$eq: 'PUBLISH'} }).pretty()

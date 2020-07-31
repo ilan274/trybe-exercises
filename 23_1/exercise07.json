@@ -1,0 +1,5 @@
+// Using mongoimport, import books.json into your local MongoDB instance and use the books collection to build queries for the following questions:
+
+// Exercise 7: Return the number of documents in the books collection
+
+db.books.find().count()

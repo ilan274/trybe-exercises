@@ -1,0 +1,6 @@
+// Exercise 10: Skip 5 documents and display the _id, title, authors and book status fields with "MEAP" status, limiting to 10 documents
+
+db.books.find({status: { $eq: 'MEAP' }},
+  {
+    title: 1, authors: 1, status: 1
+  }).pretty().limit(10).skip(5)
