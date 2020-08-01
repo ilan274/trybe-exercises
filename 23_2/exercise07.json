@@ -1,0 +1,3 @@
+// Exercise 7: Select all the superheroes that have green eyes.
+
+db.superheroes.find({ "aspects.eyeColor": "green" })

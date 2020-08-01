@@ -1,0 +1,5 @@
+// Exercise 1: Inspect a document so that you are familiar with it. Understand the fields and levels in the chosen document
+
+// Exercise 2: Select all superheroes with height less than 1.80m. Remember that this information is recorded in centimeters
+
+db.superheroes.find({ "aspects.height": { $lt: 180 } })

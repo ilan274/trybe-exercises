@@ -1,0 +1,8 @@
+// Exercise 13: Select all superheroes that are not human and are not taller than 1.80m
+
+db.superheroes.find({
+  $and: [
+    { "race": { $not: /Human/ } },
+    { "aspects.height": { $not: { $gt: 180 } } }
+  ]
+})

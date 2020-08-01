@@ -1,0 +1,5 @@
+// Exercise 18: Remove only one document published by Sony Pictures
+
+db.superheroes.deleteOne({
+  "publisher": "Sony Pictures"
+})
