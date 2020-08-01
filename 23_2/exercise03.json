@@ -1,0 +1,3 @@
+// Exercise 3: Return total amount of superheroes below 1.80m
+
+db.superheroes.find({ "aspects.height": { $lt: 180 } }).count()

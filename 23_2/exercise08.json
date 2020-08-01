@@ -1,0 +1,3 @@
+// Exercise 8: Return the total of blue-eyed superheroes
+
+db.superheroes.find({ "aspects.eyeColor": "blue" }).count()

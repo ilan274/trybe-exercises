@@ -1,0 +1,5 @@
+// Exercise 16: Return the total number of documents that do not contain the race field
+
+db.superheroes.find({
+    "race": { "$exists": true }
+}).count()

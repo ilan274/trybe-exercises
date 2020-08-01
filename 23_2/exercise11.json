@@ -1,0 +1,8 @@
+// Exercise 11: Return the total of superheroes who don't have black hair or are bald
+
+db.superheroes.find({
+    "aspects.hairColor": {
+      $exists: true,
+      $nin: ["No Hair", "Black"]
+    }
+}).count()

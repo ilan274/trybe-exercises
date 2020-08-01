@@ -1,0 +1,5 @@
+// Exercise 17: Return the total number of documents that contain the hairColor field
+
+db.superheroes.find({
+  "aspects.hairColor": { "$exists": true }
+}).count()

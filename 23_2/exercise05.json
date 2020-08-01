@@ -1,0 +1,3 @@
+// Exercise 5: Select a superhero 2.00m or taller
+
+db.superheroes.findOne({ "aspects.height": { $gte: 200 } })

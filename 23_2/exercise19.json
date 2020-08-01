@@ -1,0 +1,5 @@
+// Exercise 19: Remove all documents published by George Lucas
+
+db.superheroes.deleteMany({
+  "publisher": "George Lucas"
+})
