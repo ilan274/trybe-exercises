@@ -1,0 +1,6 @@
+// Exercise 5: Increase Home Alone's budget by 5
+
+db.movies.updateOne(
+  { "title": "Home Alone" },
+  { $inc: { "box_office.budget": 5 } }
+)

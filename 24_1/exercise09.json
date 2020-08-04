@@ -1,0 +1,9 @@
+// Exercise 9: Use the $max operator to change the imdbRating to 8.6 for the Godzilla movie. Also, change the "adventure" category to "thriller" in the Godzilla movie
+
+db.movies.updateOne(
+  { "title": "Godzilla" },
+  {
+    $max: { "imdbRating": NumberDecimal("8.6") },
+    $set: { "category.1": "adventure" }
+  }
+)

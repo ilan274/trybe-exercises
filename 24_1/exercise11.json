@@ -1,0 +1,4 @@
+// Exercise 11: Using a single operation, create a field called sequels and set it to 0 in all documents.
+
+
+db.movies.updateMany({}, { $set: { "sequels": NumberInt(0) } })

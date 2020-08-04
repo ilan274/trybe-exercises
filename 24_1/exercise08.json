@@ -1,0 +1,6 @@
+// Exercise 8: Use the $ min operator to change the budget to 5 for the Home Alone movie
+
+db.movies.updateOne(
+  { "title": "Home Alone" },
+  { $min: { "box_office.budget": 5 } }
+)

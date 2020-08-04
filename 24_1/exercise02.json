@@ -1,0 +1,6 @@
+// Exercise 2: Change budget to 1 in the Godzilla movie.
+
+db.movies.updateOne(
+  { "title": "Godzilla" },
+  { $set: { "box_office.budget": 1 } }
+)
