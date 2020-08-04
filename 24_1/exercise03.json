@@ -1,0 +1,6 @@
+// Exercise 3: Change budget to 15 and imdbRating to 5.5 in the movie Home Alone
+
+db.movies.updateOne(
+  { "title": "Home Alone" },
+  { $set: { "box_office.budget": 15, "imdbRating": NumberDecimal("5.5") } }
+)

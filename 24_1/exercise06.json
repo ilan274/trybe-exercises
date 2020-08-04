@@ -1,0 +1,3 @@
+// Exercise 6: Multiply the Batman movie's imdbRating by 4
+
+db.movies.updateOne({ "title": "Batman" }, { $mul: { "imdbRating": 4 } })

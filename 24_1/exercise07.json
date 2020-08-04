@@ -1,0 +1,3 @@
+// Exercise 7: Rename the budget field to estimatedBudget from the movie Batman
+
+db.movies.updateOne({title:"Batman"},{$rename: {"box_office.budget": "estimatedBudget"}})
