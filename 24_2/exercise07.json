@@ -1,0 +1,10 @@
+// Exercise 7: Add the "90's" category to the Batman and Home Alone films
+
+db.movies.updateMany(
+  { "title": { $in: ["Batman", "Home Alone"] } },
+  {
+    $addToSet: { "category": "90's" }
+    // or $push, but $addToSet only adds to the array
+    // if it's not a duplicated value
+  }
+)

@@ -1,0 +1,8 @@
+// Exercise 6: Add the "action" element to the Batman movie category array, ensuring that this value does not double
+
+db.movies.updateOne(
+  { "title": "Batman" },
+  {
+    $addToSet: { "category": "action" }
+  }
+)

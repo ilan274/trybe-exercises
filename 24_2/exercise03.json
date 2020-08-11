@@ -1,0 +1,6 @@
+// Exercise 3: Remove the "action" category from the Batman movie
+
+db.movies.updateOne(
+  { "title": "Batman" },
+  { $pull: { "category": "action" } } 
+)
