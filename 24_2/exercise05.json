@@ -1,0 +1,8 @@
+// Exercise 5: Remove the last element of the category array from the Batman movie
+
+db.movies.updateOne(
+  { "title": "Batman" },
+  {
+    $pop: { "category": 1 }
+  }
+)

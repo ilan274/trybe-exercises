@@ -1,0 +1,11 @@
+// Exercise 9: Add the character field with the value Marv to the cast array, where the actor field is equal to Daniel Stern, in the movie Home Alone.
+
+db.movies.updateOne(
+  {
+    "title": "Home Alone",
+    "cast.actor": "Daniel Stern"
+  },
+  {
+    $set: { "cast.$.character": "Marv" }
+  }
+);

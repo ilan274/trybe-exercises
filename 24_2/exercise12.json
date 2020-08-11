@@ -1,0 +1,16 @@
+// Exercise 12: Add to the cast actors of the Batman character in the Batman movie the values ​​"Michael Keaton", "Val Kilmer" and "George Clooney", and leave the array in alphabetical order
+
+db.movies.updateOne(
+  {
+    "title": "Batman",
+    "cast.character": "Batman"
+  },
+  {
+    $push: {
+      "cast.$.actor": {
+        $each: ["Michael Keaton", "Val Kilmer", "George Clooney"],
+        $sort: 1
+      }
+    }
+  }
+)

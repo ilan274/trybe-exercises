@@ -1,0 +1,33 @@
+/*
+Exercise 11: Produce three queries for the Batman movie where:
+1) Add the actor field that should be an array with the Christian Bale value to the cast array where the character field is equal to Batman;
+2) Add the actor field which must be an array with the value Michael Caine to the cast array where the character field is equal to Alfred;
+3) Add the actor field which must be an array with the value Heath Ledger to the cast array where the character field is equal to Joker;
+*/
+
+db.movies.updateOne(
+  { "title": "Batman", "cast.character": "Batman" },
+  {
+    $set: {
+      "cast.$.actor": ["Christian Bale"]
+    }
+  }
+)
+
+db.movies.updateOne(
+  { "title": "Batman", "cast.character": "Alfred" },
+  {
+    $set: {
+      "cast.$.actor": ["Michael Caine"]
+    }
+  }
+)
+
+db.movies.updateOne(
+  { "title": "Batman", "cast.character": "Coringa" },
+  {
+    $set: {
+      "cast.$.actor": ["Heath Ledger"]
+    }
+  }
+)
