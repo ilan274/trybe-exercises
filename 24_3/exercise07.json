@@ -1,0 +1,7 @@
+// Return all films with ratings between 100 and 105, showing only the title and ratings fields
+
+db.movies.find({
+  "ratings": {
+    $elemMatch: { $gte: 100, $lte: 105 }
+  }
+}).pretty();

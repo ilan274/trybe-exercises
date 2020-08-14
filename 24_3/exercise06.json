@@ -1,0 +1,6 @@
+// Return all films with ratings greater than 103, displaying only the title and ratings fields
+
+db.movies.find(
+  { "ratings": { $elemMatch: { $gt: 103 } } },
+  { "title": 1, "rating": 1, "_id": 0 }
+).pretty();

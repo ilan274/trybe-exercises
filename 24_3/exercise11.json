@@ -1,0 +1,5 @@
+// Return only the title of all films with four elements in the ratings array
+
+db.movies.find(
+  { "ratings": { $size: 4 } },
+  { "_id": 0, "title": 1 }).pretty();

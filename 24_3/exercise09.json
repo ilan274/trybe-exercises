@@ -1,0 +1,14 @@
+// Return films in the adventure category and rated higher than 103, displaying only the title, ratings and category fields
+
+db.movies.find(
+  {
+    "category": "adventure",
+    "ratings": { $elemMatch: { $gt: 103 } }
+  },
+  {
+    "_id": 0,
+    "title": 1,
+    "ratings": 1,
+    "category": 1
+  }
+).pretty();
