@@ -1,0 +1,7 @@
+// Using the $ all operator, return all the movies that contain action and adventure in the category array
+
+db.movies.find({
+  "category": {
+    $all: ["action", "adventure"]
+  }
+}).pretty();
