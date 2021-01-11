@@ -16,5 +16,6 @@ module.exports = {
       named: 'always',
       asyncArrow: 'always',
     }],
+    'no-console': false,
   },
 };
