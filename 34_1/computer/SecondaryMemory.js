@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const DISK_PATH = './disk';
+const DISK_PATH = '.';
 
 class SecondaryMemory {
   load(value) {
