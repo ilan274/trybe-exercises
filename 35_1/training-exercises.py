@@ -29,3 +29,8 @@ transporte = 0.75 * (qtd_livros - 1) + 3
 total = transporte + qtd_livros * preco_livro
 print(total)
 
+# Exercício 4: Adicione o elemento "Ciência da Computação" à lista
+# e a imprima para verificar a adição.
+trybe_course = ["Introdução", "Front-end", "Back-end"]
+trybe_course.append("Ciência da Computação")
+print(trybe_course)
