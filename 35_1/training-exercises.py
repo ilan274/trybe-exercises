@@ -98,3 +98,8 @@ info = {
 }
 info["recorrente"] = "Sim"
 print(info)
+
+# Exercício 7 Remova a propriedade cuja chave é "origem"
+# e imprima o objeto no console.
+info.pop("origem")
+print(info)
