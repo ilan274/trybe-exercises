@@ -39,3 +39,17 @@ print(trybe_course)
 trybe_course.remove("Introdução")
 trybe_course.insert(0, "Fundamentos")
 print(trybe_course)
+
+users = ("Ilan", "Herbach")
+print(f"O tipo é {type(users)} (tupla)")
+
+permissions = {"member", "group"}
+print(f"O tipo é {type(permissions)} (set)")
+permissions.add("root")
+print(permissions)  # = {'member', 'root', 'group'}
+print(permissions.union({"user"}))  # doesn't modify, only show
+# {'member', 'root', 'group', 'user'}
+print(permissions)  # = {'member', 'root', 'group'}
+print(permissions.intersection({"user", "member"}))
+# what both have in common = {'member'}
+print(permissions.difference({"group"}))
