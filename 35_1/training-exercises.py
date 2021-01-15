@@ -42,7 +42,6 @@ print(trybe_course)
 
 users = ("Ilan", "Herbach")
 print(f"O tipo é {type(users)} (tupla)")
-
 permissions = {"member", "group"}
 print(f"O tipo é {type(permissions)} (set)")
 permissions.add("root")
@@ -53,3 +52,12 @@ print(permissions)  # = {'member', 'root', 'group'}
 print(permissions.intersection({"user", "member"}))
 # what both have in common = {'member'}
 print(permissions.difference({"group"}))
+
+# Exercício 6: Um conjunto ou set pode ser inicializado utilizando-se também
+# o método set() . Inicialize uma variável com essa função var = set()
+# e adicione seu nome ao conjunto utilizando um dos métodos vistos acima.
+# Depois, imprima a variável e confira se o retorno é: {'seu_nome'}.
+info_user = set()
+info_user.add("Ilan")
+info_user.add("Herbach")
+print(info_user)
