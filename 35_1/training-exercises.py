@@ -15,3 +15,17 @@ hours = 24
 minutes = hours * 60
 seconds = minutes * 60
 print(hours, minutes, seconds)
+
+# Exercício 3: Suponha que o preço de capa de um livro seja 24,20,
+# mas as livrarias recebem um desconto de 40%.
+# O transporte custa 3,00 para o primeiro exemplar e
+# 75 centavos para cada exemplar adicional.
+# Qual é o custo total de atacado para 60 cópias? Escreva uma expressão que
+# receba o custo total e a imprima.
+qtd_livros = 60
+desc_percentage = 0.40
+preco_livro = 24.2 * (1 - desc_percentage)
+transporte = 0.75 * (qtd_livros - 1) + 3
+total = transporte + qtd_livros * preco_livro
+print(total)
+
