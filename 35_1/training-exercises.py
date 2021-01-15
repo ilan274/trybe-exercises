@@ -88,3 +88,13 @@ del people_by_id[1]
 people_by_id.items()  # dict_items([(1, "Cássio"), (2, "João"), (3, "Felipe")])
 # um conjunto é retornado com tuplas contendo chaves e valores
 print(people_by_name["Cássio"])
+
+# Exercício 6: Insira no objeto uma nova propriedade com o nome de chave
+# "recorrente" e o valor "Sim". Em seguida, imprima o objeto no console.
+info = {
+    "personagem": "Margarida",
+    "origem": "Pato Donald",
+    "nota": "Namorada do personagem principal nos quadrinhos do Pato Donald",
+}
+info["recorrente"] = "Sim"
+print(info)
