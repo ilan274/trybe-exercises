@@ -67,3 +67,24 @@ permissions = frozenset(["member", "group"])
 print(permissions.union({"user"}))  # = frozenset({'member', 'group', 'user'})
 print(permissions.intersection({"user", "member"}))  # = frozenset({'member'})
 print(permissions.difference({"group"}))  # = frozenset({'member'})
+
+# Dicionários (dict)
+people_by_id = {
+    1: "Cássio",
+    2: "João",
+    3: "Felipe",
+}  # elementos no formato "chave: valor" separados por vírgula,
+# envolvidos por chaves
+people_by_name = {
+    "Cássio": 1,
+    "João": 2,
+    "Felipe": 3,
+}  # outro exemplo, dessa vez usando strings como chaves (ao contrário de JS,
+# as aspas duplas são obrigatórias)
+# elementos são acessados por suas chaves
+people_by_id[1]  # saída: Cássio
+# elementos podem ser removidos com a palavra chave del
+del people_by_id[1]
+people_by_id.items()  # dict_items([(1, "Cássio"), (2, "João"), (3, "Felipe")])
+# um conjunto é retornado com tuplas contendo chaves e valores
+print(people_by_name["Cássio"])
