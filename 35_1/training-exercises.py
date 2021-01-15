@@ -61,3 +61,9 @@ info_user = set()
 info_user.add("Ilan")
 info_user.add("Herbach")
 print(info_user)
+
+# frozenset([]) = set imutável
+permissions = frozenset(["member", "group"])
+print(permissions.union({"user"}))  # = frozenset({'member', 'group', 'user'})
+print(permissions.intersection({"user", "member"}))  # = frozenset({'member'})
+print(permissions.difference({"group"}))  # = frozenset({'member'})
