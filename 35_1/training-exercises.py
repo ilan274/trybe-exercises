@@ -130,3 +130,9 @@ for restaurant in restaurants:
 
 for i in range(10):
     print(i)
+
+min_rating = 3.0
+filtered_restaurants = [
+    restaurant for restaurant in restaurants if restaurant["nota"] > min_rating
+]
+print(filtered_restaurants)  # imprime a lista de restaurantes, sem o B e D
