@@ -136,3 +136,16 @@ filtered_restaurants = [
     restaurant for restaurant in restaurants if restaurant["nota"] > min_rating
 ]
 print(filtered_restaurants)  # imprime a lista de restaurantes, sem o B e D
+
+# Exercise 6: O Fatorial de um número inteiro é representado
+# pela multiplicação de todos os números predecessores maiores que 0.
+# Por exemplo o fatorial de 5 é 120 pois 5! = 1 * 2 * 3 * 4 * 5 .
+# Escreva um código que calcule o fatorial de um número inteiro.
+
+fact = 10
+if fact == 0 or fact == 1:
+    print(0)
+else:
+    for i in range(1, fact):
+        fact = fact * i
+    print(fact)
