@@ -162,3 +162,7 @@ def concat(*strings):
         if not string == strings[-1]:
             final_string += ", "
     return final_string
+
+
+# Another way to creat dictionaries
+print(dict(nome="Ilan", sobrenome="Herbach"))
