@@ -137,7 +137,7 @@ filtered_restaurants = [
 ]
 print(filtered_restaurants)  # imprime a lista de restaurantes, sem o B e D
 
-# Exercise 6: O Fatorial de um número inteiro é representado
+# Exercise 8: O Fatorial de um número inteiro é representado
 # pela multiplicação de todos os números predecessores maiores que 0.
 # Por exemplo o fatorial de 5 é 120 pois 5! = 1 * 2 * 3 * 4 * 5 .
 # Escreva um código que calcule o fatorial de um número inteiro.
@@ -149,3 +149,16 @@ else:
     for i in range(1, fact):
         fact = fact * i
     print(fact)
+
+
+def concat(*strings):
+    # Equivalente a um ", ".join(strings), que concatena os elementos de um
+    # iterável em uma string utilizando um separador
+    # Nesse caso a string resultante estaria separada por vírgula
+    print(strings)
+    final_string = ""
+    for string in strings:
+        final_string += string
+        if not string == strings[-1]:
+            final_string += ", "
+    return final_string
