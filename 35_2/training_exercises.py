@@ -32,3 +32,27 @@ else:
 finally:
     # será sempre executado, independentemente de erro
     print("Tentativa de abrir arquivo")
+
+# Exercício 3: Dado um arquivo contendo estudantes e suas respectivas notas,
+# escreva um programa que lê todas essas informações e filtre somente
+# as pessoas que estão aprovadas, escrevendo seus nomes em outro arquivo.
+# A nota miníma para aprovação é 6.
+
+try:
+    file = open("aprovados.txt", "r")
+    conteudo = file.readlines()
+except OSError:
+    print("Uma d")
+else:
+    aprovados = []
+    for line in conteudo:
+        nota = int(line.split(" ")[1].split("\n")[0])
+        aluno = str(line.split(" ")[0])
+        if nota >= 6:
+            aprovados.append(aluno)
+            aprovados.append("\n")
+    file.close()
+    file = open("aprovados.txt", "w")
+    file.writelines(aprovados)
+    file.close()
+# seria possível com "with open" também
