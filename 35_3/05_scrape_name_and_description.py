@@ -13,7 +13,7 @@ while next_page_url:
     for product in selector.css(".product_pod"):
         # Busca e extrai o título e  o preço
         title = product.css("h3 a::attr(title)").get()
-        price = product.css(".price_color::text").get()
+        price = product.css(".price_color::text").re(r"£\d+\.\d{2}")[0]
         print(title, price)
 
         # Busca o detalhe de um produto
