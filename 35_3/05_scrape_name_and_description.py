@@ -28,6 +28,9 @@ while next_page_url:
         description = detail_selector.css(
             "#product_description ~ p::text"
         ).get()
+        suffix = "...more"
+        if description.endswith(suffix):
+            description = description[: -len(suffix)]
         print(description)
 
     # Descobre qual é a próxima página
